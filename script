@@ -1,0 +1,29 @@
+ function calcular() {
+            var peso = parseFloat(document.getElementById('peso').value)
+            var altura = parseFloat(document.getElementById('altura').value)
+            var res = document.getElementById('res')
+
+            if (isNaN(peso) || isNaN(altura) || peso <= 0 || altura <= 0) {
+                res.innerText = 'Digite valores Válidos!'
+                return
+            }
+
+            var pes = peso / (altura * altura)
+            var imc = pes.toFixed(2)
+
+
+            if (imc < 18.5) {
+                res.innerHTML = `Seu IMC é ${imc}!<strong> Você está abaixo do peso recomendado</strong>`
+            }else if (imc < 24.9) {
+                res.innerHTML = `Seu IMC é ${imc}! <strong>Você está com o peso ideal</strong>.`
+            }else if (imc < 29.9) {
+                res.innerHTML = `Seu IMC é ${imc}! <strong>Você está com sobrepeso</strong>.`
+            }else if (imc < 34.9) {
+                res.innerHTML = `Seu IMC é ${imc}! <strong>Você está com Obesidade grau 1</strong>.`
+            }else if (imc < 39.9) {
+                res.innerHTML = `Seu IMC é ${imc}! <strong>Você está com Obesidade grau 2</strong> Procure um Medico!`
+            }else {
+                res.innerHTML = `Seu IMC é ${imc}! <strong>Você está com Obesidade grau 3 (mórbida)</strong> Procure um Medico!`
+            }
+
+        }

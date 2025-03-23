@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="img/unnamed.png" alt="">
+        <h1>Índice de Massa Corporal</h1>
+
+        <label for="peso">Peso (kg)</label>
+        <input type="number" step="0.01" class="form-control" placeholder="Peso da pessoa" id="peso">
+
+        <label for="altura">Altura (m)</label>
+        <input type="number" step="0.01" class="form-control" placeholder="Altura da pessoa" id="altura">
+
+        <button id="botao" type="button" onclick="calcular()">Calcular</button>
+
+        <div id="res"></div>
+        <footer>
+            <a href="https://www.instagram.com/sennayury/" target="_blank">
+                <p>© 2025 Senna Dev - Todos os direitos reservados.</p>
+            </a>
+        </footer>
+    </div>
+
+    <script src="script"></script>
+    
+</body>
+</html>
